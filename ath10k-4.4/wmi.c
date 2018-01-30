@@ -2548,10 +2548,6 @@ int ath10k_wmi_event_debug_mesg(struct ath10k *ar, struct sk_buff *skb)
 		ath10k_dbg_print_fw_dbg_buffer(ar, ev->messages,
 					       (skb->len - 4)/sizeof(__le32),
 					       KERN_INFO);
-	else
-		ath10k_dbg_print_fw_dbg_buffer(ar, ev->messages,
-					       (skb->len - 4)/sizeof(__le32),
-					       KERN_DEBUG);
 
 	return 0;
 }
